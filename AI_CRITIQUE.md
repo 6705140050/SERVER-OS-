@@ -11,14 +11,14 @@ Members: Fode Lamine Fofana, Joshua Kibwage, Than Min Aung
 We ran every command ourselves in the lab terminal and pasted the real output to Claude. We did not diagnose independently before asking the AI. The faults found, always from real command output, were: (1) firewall rule dropping UDP 53, (2) zone file path pointing to a missing file, (3) DHCP advertising 8.8.8.8, (4) wrong A record for api.
 
 ## Part 3c: Putting the AIs to the test
-We gave the checker output and the diagnostic command outputs to Claude. A second AI tool: TODO (paste the same checker output into another AI and record its answer here).
+We gave the checker output and the diagnostic command outputs to Claude. A second AI tool: ChatGPT.
 
-| Fault (in our words) | We found it? | AI #1 (Claude) | AI #2 (TODO) | Was each AI actually right? |
+| Fault (in our words) | We found it? | AI #1 (Claude) | AI #2 (ChatGPT) | Was each AI actually right? |
 |---|---|---|---|---|
-| Firewall drops DNS | With AI help | Found it from iptables -S output | TODO | Claude right |
-| Zone file path wrong | With AI help | Found it from named-checkconf -z | TODO | Claude right |
-| DHCP gives 8.8.8.8 | With AI help | Found it from the checker and grep | TODO | Claude right |
-| api record wrong | With AI help | Found it from the checker and zone file | TODO | Claude right |
+| Firewall drops DNS | With AI help | Found it from iptables -S output | Only said to allow DNS if a firewall is enabled; never found the DROP rule | Claude right; AI2 mostly wrong  |
+| Zone file path wrong | With AI help | Found it from named-checkconf -z | Hinted to check zone file paths but never found db.MISSING | Claude right; AI2 partly right  |
+| DHCP gives 8.8.8.8 | With AI help | Found it from the checker and grep | Found it: change DNS option to 192.168.19.10 | Claude right; AI2 right  |
+| api record wrong | With AI help | Found it from the checker and zone file | Did not find the wrong api address or the serial; gave a generic zone example | Claude right; AI2 wrong  |
 
 Wrong or misleading AI suggestions: Claude made no wrong diagnosis. Its only problem was very long paste blocks that were cut off in the terminal, which we fixed by splitting them.
 
