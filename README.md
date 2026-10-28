@@ -7,3 +7,4 @@
   * Than Min Aung (6705140064) - GitHub: no account yet
 * Company / domain assigned: novapeak.lab
 * Group id used with the checker: lab01
+* Note: Fode's commits show under the GitHub account laiiminefofana-wq (same person as 6705140050).
