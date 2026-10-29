@@ -1,6 +1,6 @@
 # AI Usage and Critique
 Group: BANANA
-Members: Fode Lamine Fofana, Joshua Kibwage, Than Min Aung
+Members: Fode Lamine Fofana, Joshua Kibwage.
 
 ## Part 3a: Declaration
 | AI tool | What we used it for |
