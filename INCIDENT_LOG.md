@@ -1,6 +1,6 @@
 # Incident Log
 Group: BANANA
-Members: Fode Lamine Fofana, Joshua Kibwage, Than Min Aung
+Members: Fode Lamine Fofana, Joshua Kibwage.
 Company / domain: novapeak.lab
 
 ## Fault 1
